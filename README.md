@@ -76,14 +76,8 @@ streamlit run dashboard.py
 **1. Dissolved Oxygen (DO) Heatmap** (User Provided)
 ![DO Map](images/output_sample.png)
 
-**2. Nitrate Concentration Heatmap**
-![Nitrate Map](images/output_nitrate_ppm.png)
-
-**3. Biological Oxygen Demand (BOD) Heatmap**
+**2. Biological Oxygen Demand (BOD) Heatmap**
 ![BOD Map](images/output_bod_mgL.png)
-
-**4. Lead Toxicity Heatmap**
-![Lead Map](images/output_lead_ugL.png)
 
 Example inputs that give a **”CAN be established”** recommendation:
 - Country: `US_EPA_CWA`
