@@ -73,11 +73,14 @@ streamlit run dashboard.py
 ### Dynamic Heatmap Generation (Examples)
 *The heatmap automatically adjusts based on the selected pollutant and highlights areas with high concentrations.*
 
-**1. Dissolved Oxygen (DO) Heatmap** (User Provided)
-![DO Map](images/output_sample.png)
+**1. Environmental Heatmap (Example 1)**
+![Heatmap 1](images/output_sample_1.png)
 
-**2. Biological Oxygen Demand (BOD) Heatmap**
-![BOD Map](images/output_bod_mgL.png)
+**2. Environmental Heatmap (Example 2)**
+![Heatmap 2](images/output_sample_2.png)
+
+**3. Environmental Heatmap (Example 3)**
+![Heatmap 3](images/output_sample_3.png)
 
 Example inputs that give a **”CAN be established”** recommendation:
 - Country: `US_EPA_CWA`
