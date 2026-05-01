@@ -1,0 +1,16 @@
+{
+    "industry_name": "Proposed_Textile_Factory",
+    "location": [12, 8],
+    "discharge": {
+        "temperature_c": 8.0,
+        "ph_shift": -1.2,
+        "nitrate_ppm": 5.0,
+        "phosphate_ugL": 18.0,
+        "bod_mgL": 60.0,
+        "cod_mgL": 300.0,
+        "turbidity_ntu": 40.0,
+        "lead_ugL": 0.05,
+        "mercury_ugL": 0.005
+    },
+    "regulation": "EU_Urban_Wastewater"
+}
