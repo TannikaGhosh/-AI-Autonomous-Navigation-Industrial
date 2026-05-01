@@ -51,5 +51,5 @@ LEGAL_LIMITS = {
         "cod_mgL": 50,
         "lead_ugL": 0.01,
         "mercury_ugL": 0.001,
-    }
+    },
 }

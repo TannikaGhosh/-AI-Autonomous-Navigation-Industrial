@@ -5,16 +5,16 @@ FPS = 60
 
 # Baseline clean water parameters
 BASELINE = {
-    'nitrate_ppm': 0.5,
-    'phosphate_ugL': 0.5,
-    'temperature_c': 20.0,
-    'ph': 7.0,
-    'dissolved_oxygen_mgL': 8.0,
-    'turbidity_ntu': 2.0,
-    'bod_mgL': 2.0,
-    'cod_mgL': 10.0,
-    'lead_ugL': 0.1,
-    'mercury_ugL': 0.01,
+    "nitrate_ppm": 0.5,
+    "phosphate_ugL": 0.5,
+    "temperature_c": 20.0,
+    "ph": 7.0,
+    "dissolved_oxygen_mgL": 8.0,
+    "turbidity_ntu": 2.0,
+    "bod_mgL": 2.0,
+    "cod_mgL": 10.0,
+    "lead_ugL": 0.1,
+    "mercury_ugL": 0.01,
 }
 
 # Land use definitions for each country
@@ -54,7 +54,7 @@ LANDUSE_EU = {
         "nitrate_ppm": 0.2,
         "phosphate_ugL": 0.2,
         "bod_mgL": 0.5,
-    }
+    },
 }
 
 LANDUSE_INDIA = {
@@ -95,7 +95,7 @@ LANDUSE_INDIA = {
         "lead_ugL": 0.8,
         "mercury_ugL": 0.05,
         "ph": -1.5,
-    }
+    },
 }
 
 LANDUSE_USA = {
@@ -135,18 +135,18 @@ LANDUSE_USA = {
         "lead_ugL": 0.3,
         "ph": -0.8,
         "mercury_ugL": 0.02,
-    }
+    },
 }
 
 LANDUSE_BY_COUNTRY = {
     "EU_Urban_Wastewater": LANDUSE_EU,
     "India_CPCB": LANDUSE_INDIA,
     "US_EPA_CWA": LANDUSE_USA,
-    "Custom_Strict": LANDUSE_EU   # fallback
+    "Custom_Strict": LANDUSE_EU,  # fallback
 }
 
 # No extra point sources – land use only
 POLLUTION_SOURCES = {}
 
-TARGET_WAYPOINTS = [(5,5), (15,15), (0,18), (10,10)]
+TARGET_WAYPOINTS = [(5, 5), (15, 15), (0, 18), (10, 10)]
 START_POS = (0, 0)
