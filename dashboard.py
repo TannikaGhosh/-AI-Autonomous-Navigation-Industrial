@@ -142,7 +142,7 @@ def main():
     
     with st.sidebar:
         st.header("🌍 Select Regulation")
-        country = st.selectbox("Country / Standard", list(LEGAL_LIMITS.keys()))
+        country = st.selectbox("Country / Standard", list(LEGAL_LIMITS.keys()), index=list(LEGAL_LIMITS.keys()).index("India_CPCB"))
         
         st.markdown("---")
         st.subheader("📜 Legal Limits")
