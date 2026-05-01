@@ -108,11 +108,16 @@ def check_compliance(log_dicts, limits):
             })
     return pd.DataFrame(results)
 
-def plot_heatmap_with_path(env, path, parameter='chlorophyll_a_ugL'):
+def plot_heatmap_with_path(env, path, parameter='nitrate_ppm', limit=10):
     data = env.params.get(parameter, np.zeros((GRID_SIZE, GRID_SIZE)))
     fig, ax = plt.subplots(figsize=(8,6))
-    im = ax.imshow(data, cmap='RdYlGn_r', origin='upper', vmin=0, vmax=30)
-    plt.colorbar(im, ax=ax, label='Chlorophyll-a (µg/L)')
+    
+    cmap = 'RdYlGn' if parameter == 'dissolved_oxygen_mgL' else 'RdYlGn_r'
+    vmax = max(np.max(data), limit)
+    vmin = min(np.min(data), 0)
+    
+    im = ax.imshow(data, cmap=cmap, origin='upper', vmin=vmin, vmax=vmax)
+    plt.colorbar(im, ax=ax, label=parameter)
     for i in range(GRID_SIZE):
         for j in range(GRID_SIZE):
             if env.is_obstacle(i, j):
@@ -171,6 +176,9 @@ def main():
         evaluate_local_only = st.checkbox("🔍 Evaluate only proposed location (ignore background)", value=True)
         st.caption("If checked, compliance is based only on the cell where the new industry is placed.")
         
+        from simulation.config import BASELINE
+        heatmap_param = st.selectbox("🗺️ Select Heatmap Parameter", list(BASELINE.keys()), index=0)
+        
         run_button = st.button("🚀 Run Compliance Simulation", type="primary")
     
     # Show land use map
@@ -199,7 +207,8 @@ def main():
             col_left, col_right = st.columns([2,1])
             with col_left:
                 st.subheader("🗺️ Water Quality Heatmap & Robot Path")
-                fig_heat = plot_heatmap_with_path(env, path, parameter='chlorophyll_a_ugL')
+                limit_val = limits.get(heatmap_param, np.max(env.params.get(heatmap_param, [10])))
+                fig_heat = plot_heatmap_with_path(env, path, parameter=heatmap_param, limit=limit_val)
                 st.pyplot(fig_heat)
             with col_right:
                 st.subheader("📊 Compliance Report")
