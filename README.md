@@ -47,8 +47,8 @@ Manual water sampling is dangerous, expensive, and sparse. Industries risk legal
 
 ## ⚙️ Installation
 ```bash
-git clone https://github.com/YOUR_USERNAME/AI-Autonomous-Navigation-Industrial.git
-cd AI-Autonomous-Navigation-Industrial
+git clone https://github.com/TannikaGhosh/-AI-Autonomous-Navigation-Industrial.git
+cd -AI-Autonomous-Navigation-Industrial
 python -m venv venv
 source venv/bin/activate   # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
@@ -102,7 +102,7 @@ Example inputs that give a **”CAN be established”** recommendation:
 - Integrated multi‑country environmental regulations
 
 ## 👨💻 Author
-[Your Name] – [LinkedIn] – [GitHub]
+Tannika Ghosh – [LinkedIn](https://www.linkedin.com/in/tannika-ghosh-0b1497338) – [GitHub](https://github.com/TannikaGhosh)
 
 ---
 
