@@ -48,6 +48,14 @@ def plot_landuse_map(landuse_dict, obstacles):
 
 def run_simulation(country, proposal_loc, discharge_params):
     env = WaterEnvironment(country=country)
+    
+    # Inject proposed industry discharge at the location
+    px, py = proposal_loc
+    if not env.is_obstacle(px, py):
+        for param, val in discharge_params.items():
+            if param in env.params:
+                env.params[param][px][py] += val
+                
     perception = Perception(env)
     detector = ZoneDetector()
     robot = RobotNavigator(env, perception, detector)
